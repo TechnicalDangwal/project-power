@@ -22,4 +22,6 @@ function takeString(getString) {
 
 }
 
-console.log(takeString("nitin"));
+console.log(takeString("nittttin"));
+
+output - t
