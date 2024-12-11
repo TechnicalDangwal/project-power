@@ -1,18 +1,16 @@
 function takeString(getString) {
     let obj = {}
-    let count = 1;
     let mostCommonChar = '';
     getString = Array.from(getString)
     getString.forEach(element => {
-        if (!(element in obj)) {
-            obj[element] = count
-            count = 1
+        if (element in obj) {
+            obj[element] = obj[element]+1
         }
         else {
-            obj[element] = ++count
+            obj[element] = 1
         }
     });
-
+    delete obj[" "]
     mostCommonChar = Object.keys(obj).find((value => {
         return obj[value] === Object.values(obj).sort().reverse()[0];
 
